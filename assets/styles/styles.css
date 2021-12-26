@@ -318,7 +318,7 @@ h6 {
   width: 70px;
 }
 .page-header {
-  background: url("/assets/img/shape/page-header-bg.svg") right bottom no-repeat;
+  background: url("../img/shape/page-header-bg.svg") right bottom no-repeat;
 }
 .navbar-light .main-menu li a.nav-link,
 .navbar-light .action-btns a.btn-link,
