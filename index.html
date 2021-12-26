@@ -7,61 +7,558 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Template design with Bootstrap">
     <title>Template - Software App</title>
+    <link rel="shortcut icon" href="assets/img/logo.svg" type="image/x-icon">
     <!-- styles css bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/styles/styles.css">
     <!-- styles css fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
         integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
 </head>
 
 <body>
     <!-- navbar -->
-   <header class="main-header  w-100 "></header>
-    <nav class="navbar navbar-expand-xl navbar-light p-4">
-        <div class="container d-flex align-items-center justify-content-lg-between position-relative">
-            <div class="d-flex justify-content-between align-items-center w-100">
+    <header class="main-header w-100" id="headerMobile">
+        <nav class="navbar navbar-expand-xl navbar-light">
+            <div class="container d-flex align-items-center justify-content-lg-between position-relative">
+                <div class="d-flex justify-content-between align-items-center w-100">
+                    <a class="navbar-brand d-flex align-items-center mb-md-0 text-decoration-none" href="index.html">
+                        <div class="logo-nav">
+                            <img src="assets/img/logo.svg" alt="Logo" class="img-fluid logo-color">
+                        </div>
+                    </a>
+                    <button class="navbar-toggler position-absolute right-0 border-0 pl-5" role="button" id="buttonNav">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+                    <div class="navBar-sidebar" id="navbarNav">
+                        <ul class="nav col-12 col-md-auto justify-content-center main-menu">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">Acerca</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="articles.html">Artículos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="gallery.html">Galería</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contacto</a>
+                            </li>
+                            <div class="btn-sidebar text-end me-5 me-lg-0 d-flex w-100">
+                                <a href="sign-in.html" class="btn btn-link text-dark text-decoration-none me-2">Iniciar
+                                    sesión</a>
+                                <a href="sign-up.html" class="btn btn-primary">Registrarse</a>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="action-btns text-end me-5 me-lg-0 d-none d-md-none d-lg-flex">
+                        <a href="sign-in.html" class="btn btn-link text-dark text-decoration-none me-2">Iniciar
+                            sesión</a>
+                        <a href="sign-up.html" class="btn btn-primary">Registrarse</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Banner -->
+    <section
+        class="hero-section ptb-120 text-white bg-dark min-vh-100 d-flex align-items-center  position-relative overflow-hidden page-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-10 p-3">
+                    <div class="hero-content-wrap">
+                        <h1 class="fw-bold display-5" data-aos="fade-up">Obtenga total control y visibilidad de su
+                            empresa</h1>
+                        <p class="lead" data-aos="fade-up" data-aos-delay="50">
+                            Cordine proactivamente los vectores de calidad frente a las cadenas de suministros de
+                            servicios web.
+                        </p>
+                    </div>
+                    <div class="row justify-content-lg-start mt-3">
+                        <h3 class="text-white-70 mb-2 h6">Nuestros principales clientes:</h3>
+                        <div class="col-4 col-sm-3 my-2 ps-lg-0s integration">
+                            <img src="assets/img/google-icon.svg" alt="client" class="img-fluid">
+                        </div>
+                        <div class="col-4 col-sm-3 my-2 integration">
+                            <img src="assets/img/figma.svg" alt="client" class="img-fluid">
+                        </div>
+                        <div class="col-4 col-sm-3 my-2 integration">
+                            <img src="assets/img/slack-icon.svg" alt="client" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-8 mt-5 mb-5">
+                    <div class="hero-img position-relative circle-shape-images">
+                        <ul class="position-absolute animate-element parallax-element circle-shape-list">
+                            <li class="layer" data-depth="0.03"><img src="assets/img/shape/circle-1.svg" alt="shape"
+                                    class="circle-shape-item type-0 hero-1">
+                            </li>
+                            <li class="layer" data-depth="0.02"><img src="assets/img/shape/circle-1.svg" alt="shape"
+                                    class="circle-shape-item type-1 hero-1"></li>
+                            <li class="layer" data-depth="0.04"><img src="assets/img/shape/circle-1.svg" alt="shape"
+                                    class="circle-shape-item type-2 hero-1"></li>
+                            <li class="layer" data-depth="0.04"><img src="assets/img/shape/circle-1.svg" alt="shape"
+                                    class="circle-shape-item type-3 hero-1"></li>
+                            <li class="layer" data-depth="0.03"><img src="assets/img/shape/circle-1.svg" alt="shape"
+                                    class="circle-shape-item type-4 hero-1"></li>
+                        </ul>
+                        <img src="assets/img/programming.svg" alt="programming" class="position-relative img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="promo-section ptb-120 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-10">
+                    <div class="section-heading text-center" data-aos="fade-up">
+                        <h2>Cumple con todas las funcionalidades que necesitas</h2>
+                        <p>Desarrollado de manera creible ideas de primer lugar.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-feature-promo p-lg-5 p-3 text-center mt-4">
+                        <div class="feature-icon icon-center pb-5 rounded-custom bg-primary">
+                            <i class="fas fa-wifi fa-2x text-white"></i>
+                        </div>
+                        <div class="feature-info-wrap">
+                            <h3 class="h5">Buen rendimiento</h3>
+                            <p class="mb-0">Desarrollar apropiadamente el liderazgo competitivo en lugar de procesos
+                                estratégicos técnicamente sólidos sin estado.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-feature-promo p-lg-5 p-3 text-center mt-4">
+                        <div class="feature-icon icon-center pb-5 rounded-custom bg-danger">
+                            <i class="fas fa-code fa-2x text-white"></i>
+                        </div>
+                        <div class="feature-info-wrap">
+                            <h3 class="h5">Muy seguro</h3>
+                            <p class="mb-0">Desarrollar apropiadamente el liderazgo competitivo en lugar de procesos
+                                estratégicos técnicamente sólidos sin estado.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-feature-promo p-lg-5 p-3 text-center mt-4">
+                        <div class="feature-icon icon-center pb-5 rounded-custom bg-dark">
+                            <i class="fas fa-laptop-code fa-2x text-white"></i>
+                        </div>
+                        <div class="feature-info-wrap">
+                            <h3 class="h5">Código limpio</h3>
+                            <p class="mb-0">Desarrollar apropiadamente el liderazgo competitivo en lugar de procesos
+                                estratégicos técnicamente sólidos sin estado.</p>
+                        </div>
+                    </div>
+                </div>
 
-                <a class="navbar-brand d-flex align-items-center mb-md-0 text-decoration-none" href="#">Navbar</a>
-                
-                <div class="collapse navbar-collapse justify-content-center">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+
+            </div>
+            <div class="row pt-60">
+                <div class="col-lg-6 mt-4">
+                    <div class="position-relative d-flex flex-column h-100 flex-wrap bg-danger-soft p-5 rounded-custom">
+                        <div class="cta-left-info mb-2">
+                            <h5>Utilice los datos de su software</h5>
+                            <p>Administre dramáticamente métricas progresivas sin errores globalmente simplifique el
+                                plagio estandarizado técnicamente sólido.</p>
+                            <div class="action-btns mt-auto"><a class="btn btn-outline-primary btn-sm"
+                                    href="/index.html">Empiece gratis</a></div>
+                            <div class="cta-img position-absolute right-0 top-0 pt-5">
+                                <img src="assets/img/code.svg" alt="cta" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-4">
+                    <div
+                        class="position-relative d-flex flex-column h-100 flex-wrap bg-primary-soft p-5 rounded-custom">
+                        <div class="cta-left-info mb-2">
+                            <h5>Obtenga actualizaciones en tiempo real en cualquier momento</h5>
+                            <p>Procedimientos de prueba transparentes en pizarra interactiva antes de competencias de
+                                iniciativas de ladrillos y clics.</p>
+                            <div class="action-btns mt-auto">
+                                <a class="btn btn-outline-primary btn-sm" href="/index.html">Empiece gratis</a>
+                            </div>
+                            <div class="cta-img position-absolute right-0 top-0 pt-5">
+                                <img src="assets/img/dev.svg" alt="cta" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="why-choose-us ptb-120">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10">
+                    <div class="section-heading text-center" data-aos="fade-up">
+                        <h2>Analítica avanzada, comprensión del negocio</h2>
+                        <p>Promocionar de manera distintiva vortales paralelos con mercados electrónicos ubicuos. Evalúe
+                            proactivamente llave en mano para optimizar el liderazgo estratégico de próxima generación
+                            sin ideas que absorban recursos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-3 col-md-4 mb-4 w-auto">
+                    <ul class="list-unstyled">
+                        <li class="py-1">
+                            <i class="fas fa-check-circle me-2 text-primary"></i>
+                            Liderazgo de pensamiento
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Features</a>
+                        <li class="py-1">
+                            <i class="fas fa-check-circle me-2 text-primary"></i>
+                            Prospección modernizada
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown link
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
+                        <li class="py-1">
+                            <i class="fas fa-check-circle me-2 text-primary"></i>
+                            Exhibiendo el éxito
                         </li>
                     </ul>
                 </div>
-                <div>
-                    <a href= "" class="btn btn-link text-dark text-decoration-none me-2">Iniciar sesión</a>
-                    <a href="" class="btn btn-primary">Registrarse</a>
+                <div class="col-lg-3 col-md-4 mb-4 w-auto">
+                    <ul class="list-unstyled">
+                        <li class="py-1">
+                            <i class="fas fa-check-circle me-2 text-primary"></i>
+                            Marca personal
+                        </li>
+                        <li class="py-1">
+                            <i class="fas fa-check-circle me-2 text-primary"></i>
+                            Mejores tasas de ganancias
+                        </li>
+                        <li class="py-1">
+                            <i class="fas fa-check-circle me-2 text-primary"></i>
+                            Cumplimiento de ventas
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4 mb-4 w-auto">
+                    <ul class="list-unstyled">
+                        <li class="py-1">
+                            <i class="fas fa-check-circle me-2 text-primary"></i>
+                            Comience a rastrear su sitio web característica
+                        </li>
+                        <li class="py-1">
+                            <i class="fas fa-check-circle me-2 text-primary"></i>
+                            Soporte 24/7
+                        </li>
+                        <li class="py-1">
+                            <i class="fas fa-check-circle me-2 text-primary"></i>
+                            Prueba gratuita de 14 días
+                        </li>
+                    </ul>
                 </div>
             </div>
-
         </div>
-    </nav>
+    </section>
+    <section class="customer-review-tab ptb-120 bg-gradient text-white position-relative z-2">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-10">
+                    <div class="section-heading text-center" data-aos="fade-up">
+                        <p class="h5 text-warning">Testimonio</p>
+                        <h2>Que dicen de nosotros</h2>
+                        <p>Promocionar de manera única vectores de calidad adaptativa en lugar de mercados electrónicos
+                            independientes. pontificar arquitecturas alternativas mientras que iterar.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="tab-content" id="testimonial-tabContent">
+                        <div class="tab-pane fade active show" id="testimonial-tab-1" role="tabpanel">
+                            <div class="row align-items-center justify-content-between">
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="card-light mb-4">
+                                        <div class="testimonial-tab-content mb-5 mb-lg-0 mb-md-0">
+                                            <img src="assets/img/shape/quotes-left.svg" alt="testimonial quote"
+                                                width="65" class="img-fluid mb-32">
+                                            <div class="blockquote-title-review mb-4">
+                                                <h3 class="mb-0 h4 fw-semi-bold">
+                                                    ¡La mejor plantilla!
+                                                </h3>
+                                            </div>
+                                            <blockquote class="blockquote">
+                                                <p>Reutiliza de manera competente áreas temáticas y estratégicas
+                                                    rentables en la parte de los meta-servicios dirigidos al cliente.
+                                                </p>
+                                            </blockquote>
+                                            <div class="author-info mt-4">
+                                                <h6 class="mb-0">Joe Richard</h6>
+                                                <span>Diseño web</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="card-light mb-4">
+                                        <div class="testimonial-tab-content mb-5 mb-lg-0 mb-md-0">
+                                            <img src="assets/img/shape/quotes-left.svg" alt="testimonial quote"
+                                                width="65" class="img-fluid mb-32">
+                                            <div class="blockquote-title-review mb-4">
+                                                <h3 class="mb-0 h4 fw-semi-bold">¡Es innegablemente bueno!
+                                                </h3>
+                                            </div>
+                                            <blockquote class="blockquote">
+                                                <p>Transición progresiva de arquitecturas covalentes mientras que las
+                                                    aplicaciones verticales postergan las cosas profesionales.
+                                                </p>
+                                            </blockquote>
+                                            <div class="author-info mt-4">
+                                                <h6 class="mb-0">John Doe</h6>
+                                                <span>Desarrollador de aplicaciones</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="work-process ptb-120">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-10">
+                    <div class="section-heading text-center" data-aos="fade-up">
+                        <h4 class="h5 text-primary">Procesos</h4>
+                        <h2>Seguimos de nuestros proceso de trabajo</h2>
+                        <p>Involucre con entusiasmo las habilidades de liderazgo en varios medios para experiencias
+                            alternativas. Impulse de forma proactiva sistemas verticales que arquitecturas intuitivas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md-6">
+                    <ul class="work-process-list list-unstyled">
+                        <li class="d-flex align-items-start justify-content-end mb-4">
+                            <div class="icon-content text-right p-4 progress-order">
+                                <span class="text-primary h6">Paso 1</span>
+                                <h3 class="h5 mb-2">Investigación y planificación de contenido</h3>
+                                <p>Fomente progresivamente los sistemas para toda la empresa, mientras que el capital
+                                    invertido en preparación web aprovecha el ancho de banda base instalado.
+                                </p>
+                            </div>
+                            <div class="process-icon-2 border border-2 rounded-custom bg-white me-4 mt-2">
+                                <i class="far fa-folder fa-2x"></i>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <div class="img-wrap height-200 mb-4">
+                        <img src="assets/img/images/1.jpg" alt="" class="h-img rounded-custom">
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md-6 order-sm-1">
+                    <ul class="work-process-list list-unstyled">
+                        <li class="d-flex align-items-start mb-4 progress-order">
+                            <div class="icon-content p-4 order-1">
+                                <span class="text-primary h6">Paso 2</span>
+                                <h3 class="h5 mb-2">Publicación y ejecución</h3>
+                                <p>Administrar dramáticamente métricas progresivas sin errores globalmente simplificar
+                                    alineaciones estandarizadas plagiar distribuir.</p>
+                            </div>
+                            <div class="process-icon-2 border border-2 rounded-custom bg-white me-4 mt-2">
+                                <i class="far fa-check-circle fa-2x"></i>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <div class="img-wrap height-200 mb-4">
+                        <img src="assets/img/images/2.jpg" alt="" class="h-img rounded-custom">
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md-6">
+                    <ul class="work-process-list list-unstyled">
+                        <li class="d-flex align-items-start justify-content-end mb-4">
+                            <div class="icon-content text-right p-4 progress-order">
+                                <span class="text-primary h6">Paso 3</span>
+                                <h3 class="h5 mb-2">Prototipos de productos</h3>
+                                <p>Procedimientos de prueba transparentes en pizarra interactiva antes de que las
+                                    iniciativas de ladrillos y clics administren competencias.</p>
+                            </div>
+                            <div class="process-icon-2 border border-2 rounded-custom bg-white me-4 mt-2">
+                                <i class="fas fa-chart-pie fa-2x"></i>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <div class="img-wrap height-200 mb-4">
+                        <img src="assets/img/images/3.jpg" alt="" class="h-img rounded-custom">
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md-6 order-sm-1">
+                    <ul class="work-process-list list-unstyled">
+                        <li class="d-flex align-items-start mb-4 progress-order">
+                            <div class="icon-content p-4 order-1">
+                                <span class="text-primary h6">Paso 4</span>
+                                <h3 class="h5 mb-2">Entregar el producto final</h3>
+                                <p>Plagiar drásticamente las métricas progresivas distribuidas sin errores y simplificar
+                                    globalmente las alineaciones estandarizadas.</p>
+                            </div>
+                            <div class="process-icon-2 border border-2 rounded-custom bg-white me-4 mt-2">
+                                <i class="fas fa-truck fa-2x"></i>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <div class="img-wrap height-200 mb-4">
+                        <img src="assets/img/images/4.jpg" alt="" class="h-img rounded-custom">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer-section">
+        <div class="footer-top bg-dark bg-gradient  text-white ptb-120">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-md-8 col-lg-4 mb-md-4 mb-lg-0">
+                        <div class="footer-single-col">
+                            <div class="footer-single-col mb-4">
+                                <div class="logo-nav">
+                                    <img src="assets/img/logo-white.svg" alt="Logo" class="img-fluid logo-color">
+                                </div>
+                            </div>
+                            <p>Nuestras últimas noticias, artículos y recursos, los enviaremos a su bandeja de entrada
+                                semanalmente.</p>
+                            <form class="newsletter-form position-relative d-block d-lg-flex d-md-flex">
+                                <input type="email" class="input-newsletter form-control me-2"
+                                    placeholder="Ingrese tú correo" required>
+                                <input type="submit" value="Suscribete" class="btn btn-primary mt-3 mt-lg-0 mt-md-0">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-7 mt-4 mt-md-0 mt-lg-0">
+                        <div class="row">
+                            <div class="col-md-4 col-lg-4 mt-4 mt-md-0 mt-lg-0">
+                                <div class="footer-single-col">
+                                    <h3>Páginas primarias</h3>
+                                    <ul class="list-unstyled footer-nav-list mb-lg-0">
+                                        <li>
+                                            <a href="index.html" class="text-decoration-none">Inicio</a>
+                                        </li>
+                                        <li>
+                                            <a href="about.html" class="text-decoration-none">Acerca</a>
+                                        </li>
+                                        <li>
+                                            <a href="articles.html" class="text-decoration-none">Artículos</a>
+                                        </li>
+                                        <li>
+                                            <a href="gallery.html" class="text-decoration-none">Galería</a>
+                                        </li>
+                                        <li>
+                                            <a href="contact.html" class="text-decoration-none">Contacto</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-8 col-lg-8 mt-4 mt-md-0 mt-lg-0">
+                                <div class="gallery-img">
+                                    <div class="gallery-img-item">
+                                        <img src="assets/img/images/5.jpg" class="h-img rounded-custom" alt="">
+                                    </div>
+                                    <div class="gallery-img-item">
+                                        <img src="assets/img/images/6.jpg" class="h-img rounded-custom" alt="">
+                                    </div>
+                                    <div class="gallery-img-item">
+                                        <img src="assets/img/images/7.jpg" class="h-img rounded-custom" alt="">
+                                    </div>
+                                    <div class="gallery-img-item">
+                                        <img src="assets/img/images/8.jpg" class="h-img rounded-custom" alt="">
+                                    </div>
+                                    <div class="gallery-img-item">
+                                        <img src="assets/img/images/9.jpg" class="h-img rounded-custom" alt="">
+                                    </div>
+                                    <div class="gallery-img-item">
+                                        <img src="assets/img/images/10.jpg" class="h-img rounded-custom" alt="">
+                                    </div>
+                                    <div class="gallery-img-item">
+                                        <img src="assets/img/images/11.jpg" class="h-img rounded-custom" alt="">
+                                    </div>
+                                    <div class="gallery-img-item">
+                                        <img src="assets/img/images/12.jpg" class="h-img rounded-custom" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom footer-light  text-white py-4">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+                    <div class="col-md-7 col-lg-7">
+                        <div class="copyright-text">
+                            <p class="mb-lg-0 mb-md-0">
+                                © 2021 Todos los derechos reservados
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-4">
+                        <div class="footer-single-col text-start text-lg-end text-md-end">
+                            <ul class="list-unstyled list-inline footer-social-list mb-0">
+                                <li class="list-inline-item">
+                                    <a href="">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
     <!-- scripts js bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+    <script src="assets/script/script.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"
+        integrity="sha512-fzff82+8pzHnwA1mQ0dzz9/E0B+ZRizq08yZfya66INZBz86qKTCt9MLU0NCNIgaMJCgeyhujhasnFUsYMsi0Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
 </body>
 
 </html>
